@@ -6,7 +6,6 @@ const meta: Meta<typeof Example> = {
   component: Example,
 };
 
-
 export default meta;
 type Story = StoryObj<typeof Example>;
 
