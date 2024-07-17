@@ -1,6 +1,6 @@
 {
   "name": "@bjornfrancke/gooseui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "type": "module",
   "main": "dist/index.cjs.js",
@@ -14,6 +14,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
     "build": "tsc && vite build",
+    "prepare": "npm run build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
