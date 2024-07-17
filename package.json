@@ -1,5 +1,5 @@
 {
-  "name": "gooseui",
+  "name": "@BjornFrancke/gooseUI",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -56,5 +56,8 @@
       "npm run format",
       "npm run lint"
     ]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@BjornFrancke"
   }
 }
