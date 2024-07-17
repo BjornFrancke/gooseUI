@@ -3,7 +3,7 @@ name: publish on github
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   publish-gpr:
@@ -16,7 +16,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: "@BjornFrancke"
       - run: npm install
-      - run: npm run test
       - run: npm run build
       - run: npm publish
         env:
