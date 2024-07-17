@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/BjornFrancke/gooseUI"
+    "url": "git+https://github.com/BjornFrancke/gooseUI.git"
   },
   "scripts": {
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
@@ -61,8 +61,5 @@
       "npm run format",
       "npm run lint"
     ]
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@BjornFrancke"
   }
 }
