@@ -15,6 +15,8 @@ export const Primary: Story = {
         primary: true,
         disabled: false,
         size: "small",
+        color: "main",
+        inverted: false,
         onClick: () => console.log("Button"),
     },
 };
@@ -24,6 +26,8 @@ export const Secondary: Story = {
         primary: false,
         disabled: false,
         size: "small",
+        color: "main",
+        inverted: true,
         onClick: () => console.log("Button"),
     },
 };

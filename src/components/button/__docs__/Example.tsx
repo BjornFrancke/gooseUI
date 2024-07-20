@@ -6,6 +6,8 @@ const Example: FC<ButtonProps> = ({
     onClick = () => {},
     primary = true,
     size = "small",
+    inverted = false,
+    color = "main",
     text = "Button",
 }) => {
     return (
@@ -20,6 +22,8 @@ const Example: FC<ButtonProps> = ({
             <Button
                 size={size}
                 text={text}
+                color={color}
+                inverted={inverted}
                 disabled={disabled}
                 onClick={onClick}
                 primary={primary}

@@ -5,6 +5,8 @@ export type ButtonProps = {
     text?: string;
     primary?: boolean;
     disabled?: boolean;
+    inverted?: boolean;
+    color?: "main" | "success" | "warning" | "danger";
     size?: "small" | "medium" | "large";
     onClick?: MouseEventHandler<HTMLButtonElement>;
 };
@@ -16,9 +18,29 @@ const StyledButton = styled.button<ButtonProps>`
     font-weight: bold;
     border-radius: 10px;
     display: inline-block;
-    border: 2px solid #ff5800;
-    color: ${(props) => (props.primary ? "#fff" : "#FF5800")};
-    background-color: ${(props) => (props.primary ? "#FF5800" : "transparent")};
+    border-style: solid;
+    border-width: 2px;
+    border-color: ${(props) =>
+        !props.inverted
+            ? "transparent"
+            : props.color === "main"
+              ? "#FF5800"
+              : props.color === "success"
+                ? "#00ff2a"
+                : props.color === "danger"
+                  ? "#ff0000"
+                  : "#ffbb00"};
+    color: ${(props) => (props.inverted ? "#000000" : "#FFF")};
+    background-color: ${(props) =>
+        props.inverted
+            ? "transparent"
+            : props.color === "main"
+              ? "#FF5800"
+              : props.color === "success"
+                ? "#00ff2a"
+                : props.color === "danger"
+                  ? "#ff0000"
+                  : "#ffbb00"};
     padding: ${(props) =>
         props.size === "small"
             ? "7px 25px 8px"
@@ -33,6 +55,7 @@ const Button: React.FC<ButtonProps> = ({
     disabled,
     text,
     onClick,
+    color,
     ...props
 }) => {
     return (
@@ -40,6 +63,7 @@ const Button: React.FC<ButtonProps> = ({
             type="button"
             onClick={onClick}
             primary={primary}
+            color={color}
             disabled={disabled}
             size={size}
             {...props}
