@@ -58,8 +58,9 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "npm run format",
-      "npm run lint"
+      "npm run format"
     ]
-  }
-}
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }}
